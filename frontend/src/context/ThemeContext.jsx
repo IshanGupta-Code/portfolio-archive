@@ -1,11 +1,12 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { Sun, Moon, Zap } from "lucide-react";
 
 const ThemeContext = createContext();
 
 export const themes = {
   day: {
     name: "day",
-    icon: "☀️",
+    icon: "🔆",
     label: "Day",
     colors: {
       "--bg-primary": "#fafafa",
@@ -29,7 +30,7 @@ export const themes = {
   },
   night: {
     name: "night",
-    icon: "🌙",
+    icon: "🌚",
     label: "Night",
     colors: {
       "--bg-primary": "#0a0a0b",
