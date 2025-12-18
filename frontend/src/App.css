@@ -1,0 +1,70 @@
+.App {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+/* Smooth section transitions */
+section {
+  position: relative;
+}
+
+/* Global link styles */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Global button transitions */
+button {
+  transition: all 0.2s ease;
+}
+
+/* Cyber theme global effects */
+[data-theme='cyber'] .App {
+  background: #050508;
+}
+
+[data-theme='cyber'] {
+  --neon-pink: #ff0080;
+  --neon-green: #00ff88;
+  --neon-cyan: #00f5ff;
+  --neon-purple: #bf00ff;
+}
+
+/* Loading state animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.loading {
+  background: linear-gradient(
+    90deg,
+    var(--bg-tertiary) 25%,
+    var(--bg-secondary) 50%,
+    var(--bg-tertiary) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Utility classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
